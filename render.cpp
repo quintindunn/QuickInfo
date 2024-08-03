@@ -5,6 +5,7 @@
 #include <Windows.h>
 #include <thread>
 #include <string>
+#include <ctime>
 
 #include <clipboardxx.hpp>
 
@@ -12,6 +13,7 @@
 #include "gui.h"
 
 void render_main(Machine usrMachine);
+void render_date_info(void);
 void render_ip_info(void);
 void render_network_adapters(void);
 
@@ -35,8 +37,20 @@ void render_main(Machine usrMachine) {
 	GUIState::machine = &usrMachine;
 
 	ImGui::Indent(10);
+	render_date_info();
 	render_ip_info();
 	render_network_adapters();
+}
+
+void render_date_info() {
+	std::time_t now = std::time(nullptr);
+	const std::tm* time_out = std::localtime(&now);
+
+	char buffer[64];
+	std::strftime(buffer, sizeof(buffer), "%m/%d/%Y %I:%M:%S %p", time_out);
+
+	ImGui::Text("Date: %s", buffer);
+
 }
 
 void render_ip_info() {

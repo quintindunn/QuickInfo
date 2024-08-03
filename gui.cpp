@@ -8,6 +8,8 @@
 
 #include <string>
 
+#include <thread>
+
 #include <d3d11.h>
 
 #include "machineInfo.h"
@@ -136,9 +138,15 @@ INT APIENTRY buildWindow(HINSTANCE instance, HINSTANCE, PSTR, INT cmd_show, Mach
 
 		bool running = true;
 
+		long last_update = 0;
+
 		while (running) {
 			MSG msg;
-			while (PeekMessage(&msg, nullptr, 0U, 0U, PM_REMOVE)) {
+			std::this_thread::sleep_for(std::chrono::milliseconds(10));
+			long now = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
+
+			while (PeekMessage(&msg, nullptr, 0U, 0U, PM_REMOVE) | now - last_update >= 100) {
+				last_update = now;
 				TranslateMessage(&msg);
 				DispatchMessage(&msg);
 

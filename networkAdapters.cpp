@@ -16,19 +16,14 @@ std::vector<networkAdapter> networkAdapters() {
 
 	DWORD dwSize = 0;
 	DWORD dwRetVal = 0;
-	std::cout << 0 << std::endl;
-
 	if (GetAdaptersInfo(NULL, &dwSize) == ERROR_BUFFER_OVERFLOW) {
 		PIP_ADAPTER_INFO pAdapterInfo = (IP_ADAPTER_INFO*)malloc(dwSize);
-		std::cout << 1 << std::endl;
 
 
 		if ((dwRetVal = GetAdaptersInfo(pAdapterInfo, &dwSize)) == NO_ERROR) {
 			PIP_ADAPTER_INFO pAdapter = pAdapterInfo;
-			std::cout << 2 << std::endl;
 
 			while (pAdapter) {
-				std::cout << 3 << std::endl;
 				networkAdapter adapter;
 
 				std::ostringstream adapterAddr;
@@ -76,8 +71,6 @@ std::vector<networkAdapter> networkAdapters() {
 		}
 
 	}
-
-	std::cout << "Completed!" << std::endl;
 	return adapters;
 }
 

@@ -18,7 +18,7 @@
 #include "machineInfo.h"
 #include "gui.h"
 #include "render.h"
-
+#include "config.h"
 
 Machine* usrMachine;
 

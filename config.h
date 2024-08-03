@@ -7,3 +7,5 @@
 #define GUI_NAME "Machine Information"
 
 #define INIFILE nullptr
+
+//#define DEBUG
