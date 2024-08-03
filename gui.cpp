@@ -13,21 +13,7 @@
 #include "machineInfo.h"
 #include "render.h"
 
-#ifndef WINDOW_WIDTH
-#define WINDOW_WIDTH 400
-#endif
-
-#ifndef WINDOW_HEIGHT
-#define WINDOW_HEIGHT 700
-#endif
-
-#ifndef WINDOW_NAME
-#define WINDOW_NAME L"Machine Information"
-#endif
-
-#ifndef GUI_NAME
-#define GUI_NAME "Machine Information"
-#endif
+#include "config.h"
 
 extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWndm, UINT msg, WPARAM wParam, LPARAM lParam);
 
@@ -164,6 +150,9 @@ INT APIENTRY buildWindow(HINSTANCE instance, HINSTANCE, PSTR, INT cmd_show, Mach
 					break;
 				}
 
+				#ifdef INIFILE
+				ImGui::GetIO().IniFilename = INIFILE;
+				#endif
 				ImGui_ImplDX11_NewFrame();
 				ImGui_ImplWin32_NewFrame();
 

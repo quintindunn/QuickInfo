@@ -22,6 +22,7 @@ std::vector<networkAdapter> Machine::getNetworkAdapters() {
 	return this->adapters;
 }
 
+
 void Machine::queryPublicIpAddress() {
 	CURL* curl;
 	CURLcode res;
