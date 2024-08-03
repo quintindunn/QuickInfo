@@ -29,6 +29,8 @@ void copy_to_clipboard_btn(std::string content, int uniqueId) {
 	ImGui::SameLine();
 	if (ImGui::Button("Copy")) {
 		clipboard << content;
+		ImGui::SameLine();
+		ImGui::Text("Copied!");
 	}
 	ImGui::PopID();
 }
@@ -50,7 +52,7 @@ void render_date_info() {
 	std::strftime(buffer, sizeof(buffer), "%m/%d/%Y %I:%M:%S %p", time_out);
 
 	ImGui::Text("Date: %s", buffer);
-
+	ImGui::NewLine();
 }
 
 void render_ip_info() {
