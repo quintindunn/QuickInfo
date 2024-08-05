@@ -51,6 +51,27 @@
     <ClCompile Include="render.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="speedtesting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="external\internetspeedtest\config.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="external\internetspeedtest\filegetter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="external\internetspeedtest\requester.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="external\internetspeedtest\server.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="external\internetspeedtest\speedtester.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="external\internetspeedtest\string_utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="machineInfo.h">
@@ -90,6 +111,27 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="speedtesting.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="external\internetspeedtest\config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="external\internetspeedtest\filegetter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="external\internetspeedtest\requester.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="external\internetspeedtest\server.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="external\internetspeedtest\speedtester.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="external\internetspeedtest\string_utils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

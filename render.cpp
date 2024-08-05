@@ -9,18 +9,17 @@
 
 #include <clipboardxx.hpp>
 
+#include "render.h"
+
 #include "machineInfo.h"
 #include "gui.h"
+#include "speedtesting.h"
 
 void render_main(Machine usrMachine);
 void render_date_info(void);
 void render_ip_info(void);
 void render_network_adapters(void);
 
-namespace GUIState {
-	bool showAdapters = false;
-	Machine* machine;
-};
 
 void copy_to_clipboard_btn(std::string content, int uniqueId) {
 	static clipboardxx::clipboard clipboard;
@@ -35,12 +34,44 @@ void copy_to_clipboard_btn(std::string content, int uniqueId) {
 	ImGui::PopID();
 }
 
+void render_internet_speed() {
+	ImGui::NewLine();
+
+	if (!GUIState::running_speedtest) {
+		if (ImGui::Button("Run Speed Test")) {
+			runSpeedTest();
+		}
+	}
+	else {
+		ImGui::Text("Speed Test Running!");
+	}
+
+
+	int networkSpeedsHeight = GUIState::download_speed != -1 ? 27 : 0;
+	networkSpeedsHeight += GUIState::upload_speed != -1 ? 27 : 0;
+
+	if (networkSpeedsHeight != 0)
+		ImGui::BeginChild("NetworkSpeeds", ImVec2(300, networkSpeedsHeight), true, ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoScrollWithMouse);
+
+	if (GUIState::download_speed != -1)
+		ImGui::Text("Download Speed: %fMbps", GUIState::download_speed);
+	if (GUIState::upload_speed != -1)
+		ImGui::Text("Upload Speed  : %fMbps", GUIState::upload_speed);
+
+	if (networkSpeedsHeight != 0)
+		ImGui::EndChild();
+
+	ImGui::NewLine();
+}
+
+
 void render_main(Machine usrMachine) {
 	GUIState::machine = &usrMachine;
 
 	ImGui::Indent(10);
 	render_date_info();
 	render_ip_info();
+	render_internet_speed();
 	render_network_adapters();
 }
 
