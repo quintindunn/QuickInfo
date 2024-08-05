@@ -15,6 +15,8 @@
 #include "gui.h"
 #include "speedtesting.h"
 
+#include "external/internetspeedtest/speedtester.h"
+
 void render_main(Machine usrMachine);
 void render_date_info(void);
 void render_ip_info(void);
@@ -47,8 +49,8 @@ void render_internet_speed() {
 	}
 
 
-	int networkSpeedsHeight = GUIState::download_speed != -1 ? 27 : 0;
-	networkSpeedsHeight += GUIState::upload_speed != -1 ? 27 : 0;
+	int networkSpeedsHeight = GUIState::download_speed != -1 || is_infinity_is_zero_is_denormal(GUIState::download_speed) ? 27 : 0;
+	networkSpeedsHeight += GUIState::upload_speed != -1 || is_infinity_is_zero_is_denormal(GUIState::upload_speed) ? 27 : 0;
 
 	if (networkSpeedsHeight != 0)
 		ImGui::BeginChild("NetworkSpeeds", ImVec2(300, networkSpeedsHeight), true, ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoScrollWithMouse);

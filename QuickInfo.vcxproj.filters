@@ -15,123 +15,129 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="machineInfo.cpp">
+    <ClCompile Include="src\machineInfo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="networkAdapters.cpp">
+    <ClCompile Include="src\networkAdapters.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="external\imgui\imgui.cpp">
+    <ClCompile Include="src\external\imgui\imgui.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="external\imgui\imgui_demo.cpp">
+    <ClCompile Include="src\external\imgui\imgui_demo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="external\imgui\imgui_draw.cpp">
+    <ClCompile Include="src\external\imgui\imgui_draw.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="external\imgui\imgui_impl_dx11.cpp">
+    <ClCompile Include="src\external\imgui\imgui_impl_dx11.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="external\imgui\imgui_impl_win32.cpp">
+    <ClCompile Include="src\external\imgui\imgui_impl_win32.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="external\imgui\imgui_tables.cpp">
+    <ClCompile Include="src\external\imgui\imgui_tables.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="external\imgui\imgui_widgets.cpp">
+    <ClCompile Include="src\external\imgui\imgui_widgets.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="gui.cpp">
+    <ClCompile Include="src\gui.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="render.cpp">
+    <ClCompile Include="src\render.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="speedtesting.cpp">
+    <ClCompile Include="src\speedtesting.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="external\internetspeedtest\config.cpp">
+    <ClCompile Include="src\external\internetspeedtest\config.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="external\internetspeedtest\filegetter.cpp">
+    <ClCompile Include="src\external\internetspeedtest\filegetter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="external\internetspeedtest\requester.cpp">
+    <ClCompile Include="src\external\internetspeedtest\requester.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="external\internetspeedtest\server.cpp">
+    <ClCompile Include="src\external\internetspeedtest\server.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="external\internetspeedtest\speedtester.cpp">
+    <ClCompile Include="src\external\internetspeedtest\speedtester.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="external\internetspeedtest\string_utils.cpp">
+    <ClCompile Include="src\external\internetspeedtest\string_utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\external\internetspeedtest\fileputter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="machineInfo.h">
+    <ClInclude Include="src\machineInfo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="networkAdapters.h">
+    <ClInclude Include="src\networkAdapters.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="external\imgui\imconfig.h">
+    <ClInclude Include="src\external\imgui\imconfig.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="external\imgui\imgui.h">
+    <ClInclude Include="src\external\imgui\imgui.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="external\imgui\imgui_impl_dx11.h">
+    <ClInclude Include="src\external\imgui\imgui_impl_dx11.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="external\imgui\imgui_impl_win32.h">
+    <ClInclude Include="src\external\imgui\imgui_impl_win32.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="external\imgui\imgui_internal.h">
+    <ClInclude Include="src\external\imgui\imgui_internal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="external\imgui\imstb_rectpack.h">
+    <ClInclude Include="src\external\imgui\imstb_rectpack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="external\imgui\imstb_textedit.h">
+    <ClInclude Include="src\external\imgui\imstb_textedit.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="external\imgui\imstb_truetype.h">
+    <ClInclude Include="src\external\imgui\imstb_truetype.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="gui.h">
+    <ClInclude Include="src\gui.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="render.h">
+    <ClInclude Include="src\render.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="config.h">
+    <ClInclude Include="src\config.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="speedtesting.h">
+    <ClInclude Include="src\speedtesting.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="external\internetspeedtest\config.h">
+    <ClInclude Include="src\external\internetspeedtest\config.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="external\internetspeedtest\filegetter.h">
+    <ClInclude Include="src\external\internetspeedtest\filegetter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="external\internetspeedtest\requester.h">
+    <ClInclude Include="src\external\internetspeedtest\requester.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="external\internetspeedtest\server.h">
+    <ClInclude Include="src\external\internetspeedtest\server.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="external\internetspeedtest\speedtester.h">
+    <ClInclude Include="src\external\internetspeedtest\speedtester.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="external\internetspeedtest\string_utils.h">
+    <ClInclude Include="src\external\internetspeedtest\string_utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\external\internetspeedtest\fileputter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
